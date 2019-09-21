@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<!-- 设置为Dao接口方法提供sql语句配置 -->
+<mapper namespace="com.csi.dao.NoticeDao">
+    <sql id="Base_Column_List">
+    	ID,
+    	TITLE,
+    	CONTENT,
+    	CREATE_DAT,
+    	USER_ID
+  	</sql>
+
+    <!-- 通过id查询单个通知 -->
+    <select id="findNoticeFromId" resultType="com.csi.entity.Notice" parameterType="int">
+        SELECT
+            <include refid="Base_Column_List"/>
+        FROM
+            notice_inf
+        WHERE
+            ID = #{id}
+    </select>
+
+    <!-- 查询notice_inf所有信息 -->
+    <select id="findAllNotice" resultType="com.csi.entity.Notice">
+        select
+            <include refid="Base_Column_List"/>
+        from
+            notice_inf
+    </select>
+
+    <!-- 通过标题查询通知 -->
+    <select id="findNoticeFromTitle" parameterType="string" resultType="com.csi.entity.Notice">
+        SELECT
+        <include refid="Base_Column_List"/>
+        FROM
+        notice_inf
+        <where>
+            <if test="title != null and title != ''">
+                AND notice_inf.title LIKE concat('%',#{title},'%')
+            </if>
+        </where>
+    </select>
+
+    <!-- 通过内容查询通知 -->
+    <select id="findNoticeFromContent" parameterType="string" resultType="com.csi.entity.Notice">
+        SELECT
+        <include refid="Base_Column_List"/>
+        FROM
+        notice_inf
+        <where>
+            <if test="content != null and content != ''">
+                AND notice_inf.content LIKE concat('%',#{content},'%')
+            </if>
+        </where>
+    </select>
+
+    <!-- 通过标题和内容查询通知 -->
+    <select id="findNoticeFromInfo" parameterType="string" resultType="com.csi.entity.Notice">
+        SELECT
+            <include refid="Base_Column_List"/>
+        FROM
+            notice_inf
+        <where>
+            <if test="title != null and title != ''">
+                AND notice_inf.title LIKE concat('%',#{title},'%')
+            </if>
+            <if test="content != null and content != ''">
+                AND notice_inf.content LIKE concat('%',#{content},'%')
+            </if>
+        </where>
+    </select>
+
+    <!-- 通过id删除单个通知 -->
+    <delete id="deleteNoticeFromId" parameterType="Integer">
+		DELETE
+		FROM
+			notice_inf
+		WHERE
+			ID = #{id}
+	</delete>
+
+    <!-- 增加单个通知 -->
+    <insert id="addNotice" useGeneratedKeys="true" keyProperty="ID" keyColumn="ID">
+        <selectKey keyProperty="ID" resultType="Integer">
+            select LAST_INSERT_ID()
+        </selectKey>
+		INSERT INTO notice_inf (
+			notice_inf.TITLE,
+			notice_inf.CONTENT,
+			notice_inf.CREATE_DAT,
+			notice_inf.USER_ID
+		)
+		VALUES
+			(#{title}, #{content}, #{createDate}, #{userId})
+	</insert>
+
+    <!-- 更新通知 -->
+    <update id="updateNotice" useGeneratedKeys="true" keyProperty="ID" keyColumn="ID">
+		UPDATE notice_inf
+		SET notice_inf.TITLE = #{title},
+			notice_inf.CREATE_DAT = #{createDate},
+			notice_inf.USER_ID = #{userId},
+			notice_inf.CONTENT = #{content}
+		WHERE
+			ID = #{id}
+	</update>
+
+    <!-- 通过id查找用户名 -->
+    <select id="findUserNameFromId">
+		SELECT
+			user_inf.Loginname
+		FROM
+			user_inf
+		WHERE
+			user_inf.ID = #{id}
+	</select>
+</mapper>
