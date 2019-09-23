@@ -6,7 +6,29 @@
     </artifacts-to-build>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="fb88631c-a10d-4a9d-886f-481245047624" name="Default Changelist" comment="" />
+    <list default="true" id="fb88631c-a10d-4a9d-886f-481245047624" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/csi/controller/NoticeController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/csi/controller/NoticeController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/csi/dao/NoticeDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/csi/dao/NoticeDao.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/csi/service/Impl/NoticeServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/csi/service/Impl/NoticeServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/csi/service/NoticeService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/csi/service/NoticeService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/mapper/NoticeDao.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/mapper/NoticeDao.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/csi/dao/NoticeDaoTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/csi/service/NoticeServiceTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/csi/controller/NoticeController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/csi/controller/NoticeController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/csi/dao/NoticeDao.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/csi/dao/NoticeDao.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/csi/service/Impl/NoticeServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/csi/service/Impl/NoticeServiceImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/csi/service/NoticeService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/csi/service/NoticeService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/mapper/NoticeDao.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/mapper/NoticeDao.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/csi_demo/WEB-INF/classes/com/csi/controller/NoticeController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/csi_demo/WEB-INF/classes/com/csi/controller/NoticeController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/csi_demo/WEB-INF/classes/com/csi/dao/NoticeDao.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/csi_demo/WEB-INF/classes/com/csi/dao/NoticeDao.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/csi_demo/WEB-INF/classes/com/csi/service/Impl/NoticeServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/csi_demo/WEB-INF/classes/com/csi/service/Impl/NoticeServiceImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/csi_demo/WEB-INF/classes/com/csi/service/NoticeService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/csi_demo/WEB-INF/classes/com/csi/service/NoticeService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/csi_demo/WEB-INF/classes/mapper/NoticeDao.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/csi_demo/WEB-INF/classes/mapper/NoticeDao.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/com/csi/dao/NoticeDaoTest.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/com/csi/service/NoticeServiceTest.class" beforeDir="false" />
+    </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -36,6 +58,9 @@
       </list>
     </option>
   </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
   <component name="LogFilters">
     <option name="FILTER_ERRORS" value="false" />
     <option name="FILTER_WARNINGS" value="false" />
@@ -58,11 +83,12 @@
   </component>
   <component name="ProjectId" id="1Qv8ulHd4ljkKd3f7eVOtOw0vIt" />
   <component name="PropertiesComponent">
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary" value="JUnit4" />
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit4" value="" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../csi" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="project.structure.last.edited" value="Artifacts" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
@@ -184,10 +210,25 @@
       <workItem from="1568878047932" duration="5850000" />
       <workItem from="1568960514899" duration="17841000" />
       <workItem from="1569029684139" duration="20191000" />
+      <workItem from="1569199546607" duration="5776000" />
+      <workItem from="1569239188545" duration="3219000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State>
+              <option name="COLUMN_ORDER" />
+            </State>
+          </value>
+        </entry>
+      </map>
+    </option>
   </component>
 </project>

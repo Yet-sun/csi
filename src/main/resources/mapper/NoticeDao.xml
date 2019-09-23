@@ -11,68 +11,16 @@
     	USER_ID
   	</sql>
 
-    <!-- 通过id查询单个通知 -->
-    <select id="findNoticeFromId" resultType="com.csi.entity.Notice" parameterType="int">
-        SELECT
-            <include refid="Base_Column_List"/>
-        FROM
-            notice_inf
-        WHERE
-            ID = #{id}
-    </select>
-
     <!-- 查询notice_inf所有信息 -->
-    <select id="findAllNotice" resultType="com.csi.entity.Notice">
-        select
-            <include refid="Base_Column_List"/>
-        from
-            notice_inf
-    </select>
-
-    <!-- 通过标题查询通知 -->
-    <select id="findNoticeFromTitle" parameterType="string" resultType="com.csi.entity.Notice">
-        SELECT
-        <include refid="Base_Column_List"/>
-        FROM
-        notice_inf
-        <where>
-            <if test="title != null and title != ''">
-                AND notice_inf.title LIKE concat('%',#{title},'%')
-            </if>
-        </where>
-    </select>
-
-    <!-- 通过内容查询通知 -->
-    <select id="findNoticeFromContent" parameterType="string" resultType="com.csi.entity.Notice">
-        SELECT
-        <include refid="Base_Column_List"/>
-        FROM
-        notice_inf
-        <where>
-            <if test="content != null and content != ''">
-                AND notice_inf.content LIKE concat('%',#{content},'%')
-            </if>
-        </where>
-    </select>
-
-    <!-- 通过标题和内容查询通知 -->
-    <select id="findNoticeFromInfo" parameterType="string" resultType="com.csi.entity.Notice">
-        SELECT
-            <include refid="Base_Column_List"/>
-        FROM
-            notice_inf
-        <where>
-            <if test="title != null and title != ''">
-                AND notice_inf.title LIKE concat('%',#{title},'%')
-            </if>
-            <if test="content != null and content != ''">
-                AND notice_inf.content LIKE concat('%',#{content},'%')
-            </if>
-        </where>
+    <select id="selectByLimitAndOffset" resultType="com.csi.entity.Notice">
+        select <include refid="Base_Column_List"/>
+        from notice_inf
+        order by ID desc
+        limit #{offset}, #{limit};
     </select>
 
     <!-- 通过id删除单个通知 -->
-    <delete id="deleteNoticeFromId" parameterType="Integer">
+    <delete id="deleteNoticeFromId" parameterType="String">
 		DELETE
 		FROM
 			notice_inf
@@ -105,14 +53,4 @@
 		WHERE
 			ID = #{id}
 	</update>
-
-    <!-- 通过id查找用户名 -->
-    <select id="findUserNameFromId">
-		SELECT
-			user_inf.Loginname
-		FROM
-			user_inf
-		WHERE
-			user_inf.ID = #{id}
-	</select>
 </mapper>

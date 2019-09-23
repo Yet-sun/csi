@@ -14,60 +14,12 @@ import java.util.List;
  */
 
 public interface NoticeService {
-    /**
-     * @Author: sunyue
-     * @Description: 查询所有通知
-     * @Version: 1.0
-     */
-    List<Notice> findAllNotice();
 
-    /**
-     * @Author: sunyue
-     * @Description: 通过输入的信息查询相应通知
-     * @Version: 1.0
-     */
-    List<Notice> findNoticeFromInfo(@Param("title") String title, @Param("content") String content);
-
-    /**
-     * @Author: sunyue
-     * @Description: 通过输入的title查询
-     * @Version: 1.0
-     */
-    List<Notice> findNoticeFromTitle(String title);
-
-    /**
-     * @Author: sunyue
-     * @Description: 通过输入的content查询
-     * @Version: 1.0
-     */
-    List<Notice> findNoticeFromContent(String content);
-
-    /**
-     * @Author: sunyue
-     * @Description: 通过id查询通知
-     * @Version: 1.0
-     */
-    Notice findNoticeFromId(Integer id);
-
-    /**
-     * @Author: sunyue
-     * @Description: 通过id删除通知
-     * @Version: 1.0
-     */
     void deleteNoticeFromId(Integer id);
 
-    /**
-     * @return
-     * @Author: sunyue
-     * @Description: 添加通知
-     * @Version: 1.0
-     */
-    void addNotice(@Param("title") String title, @Param("content") String content, @Param("userId") Integer userId);
+    void updateNotice(@Param("title") String title, @Param("userId") Integer userId, @Param("content") String content, @Param("id") Integer id);
 
-    /**
-     * @Author: sunyue
-     * @Description: 修改通知
-     * @Version: 1.0
-     */
-    boolean updateNotice(@Param("title") String title, @Param("userId") String userId, @Param("content") String content, @Param("id") String id);
+    void addNotice(@Param("content") String content, @Param("createDate") Timestamp createDate, @Param("userId") Integer userId);
+
+    List<Notice> selectByLimitAndOffset(@Param("limit") Integer limit, @Param("offset") Integer offset);
 }
